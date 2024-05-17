@@ -1,0 +1,17 @@
+# NODE IMAGE
+FROM node:14
+
+# Creating app directory
+WORKDIR /usr/src/app
+
+# Copy Dependencies
+COPY package*.json ./
+
+# Install Dependencies.
+RUN npm install
+
+# Copy code to the container image.
+COPY . .
+
+# Run the application by default.
+ENTRYPOINT ["node", "./index.js"]

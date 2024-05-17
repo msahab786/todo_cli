@@ -1,0 +1,11 @@
+# Build the Docker image.
+- docker build -t todo-cli .
+
+# Run the Docker container.
+- docker run --rm todo-cli
+
+# Run Locally
+- node index.js
+
+# Run Test
+- npm test
